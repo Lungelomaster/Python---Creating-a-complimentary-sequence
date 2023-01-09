@@ -1,0 +1,17 @@
+# Python---Creating-a-complimentary-sequence
+This script ican be used to generate a complimentary sequence if you have the template sequence in python
+sequence="GATTACA" # Enter the template sequence
+reverse = {"A" : "T",    # Dictionary for creating key with complimenting values, A-T, and G-C and vise versa
+           "C" : "G",
+           "G" : "C",
+           "T" : "A"
+}
+print(reverse)
+compliment = [] # Opening an empty list for the complimentary sequence
+for i in sequence: #iterating through the templating sequence, nucleotide per nucleotide
+    for k,v in reverse.items():  # accessing the keys and values of the reverse dictionary
+        if i == k: # If an element in the template sequence is similar to the key in our dictionary, the value in our dictionary must be appended in the empty comliment list created earlier
+            compliment.append(v) # appending to the list
+reseq = "".join(compliment) # Converting the list into a string
+
+print(reseq[::-1]) # reversing the string because we our complimentary must be read from 5 prime to 3 prime.
