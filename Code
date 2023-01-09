@@ -1,0 +1,15 @@
+sequence="GATTACA"
+reverse = {"A" : "T",
+           "C" : "G",
+           "G" : "C",
+           "T" : "A"
+}
+print(reverse)
+compliment = []
+for i in sequence:
+    for k,v in reverse.items():
+        if i == k:
+            compliment.append(v)
+reseq = "".join(compliment)
+
+print(reseq[::-1])
